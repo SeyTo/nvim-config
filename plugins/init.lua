@@ -73,4 +73,7 @@ return {
     module = "syntax-tree-surfer",
     config = function() require "user.plugins.syntax-tree-surfer" end,
   },
+  ["s1n7ax/nvim-search-and-replace"] = {
+    config = function() require("nvim-search-and-replace").setup() end,
+  },
 }
