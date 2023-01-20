@@ -55,7 +55,10 @@ return {
     after = "telescope.nvim",
     config = function() require "user.plugins.telescope-project" end,
   },
-  ["nvim-treesitter/nvim-treesitter-textobjects"] = { after = "nvim-treesitter" },
+  ["nvim-treesitter/nvim-treesitter-textobjects"] = {
+    after = "nvim-treesitter",
+    config = function() require "user.plugins.nvim-treesitter-textobjects" end,
+  },
   ["lvimuser/lsp-inlayhints.nvim"] = {
     module = "lsp-inlayhints",
     config = function() require "user.plugins.lsp-inlayhints" end,
@@ -75,5 +78,37 @@ return {
   },
   ["s1n7ax/nvim-search-and-replace"] = {
     config = function() require("nvim-search-and-replace").setup() end,
+  },
+  ["phaazon/hop.nvim"] = require "user.plugins.hop",
+  ["nvim-lua/plenary.nvim"] = {
+    disable = false,
+  },
+  ["ThePrimeagen/harpoon"] = {
+    requires = "nvim-lua/plenary.nvim",
+    config = function() require "user.plugins.harpoon" end,
+  },
+  ["yriveiro/dap-go.nvim"] = {
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("dap-go").setup {
+        dap = {
+          configurations = {
+            {
+              type = "go",
+              name = "Debug",
+              request = "launch",
+              program = "${file}",
+            },
+            {
+              type = "go",
+              name = "Attach",
+              mode = "local",
+              request = "attach",
+              processId = require("dap.utils").pick_process,
+            },
+          },
+        },
+      }
+    end,
   },
 }

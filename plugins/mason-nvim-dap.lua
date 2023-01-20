@@ -4,5 +4,6 @@ return {
     "delve",
     "js",
     "python",
+    "go",
   },
 }
