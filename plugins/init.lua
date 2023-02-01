@@ -87,28 +87,38 @@ return {
     requires = "nvim-lua/plenary.nvim",
     config = function() require "user.plugins.harpoon" end,
   },
-  ["yriveiro/dap-go.nvim"] = {
-    requires = "nvim-lua/plenary.nvim",
-    config = function()
-      require("dap-go").setup {
-        dap = {
-          configurations = {
-            {
-              type = "go",
-              name = "Debug",
-              request = "launch",
-              program = "${file}",
-            },
-            {
-              type = "go",
-              name = "Attach",
-              mode = "local",
-              request = "attach",
-              processId = require("dap.utils").pick_process,
-            },
-          },
-        },
-      }
-    end,
+  -- ["crispgm/nvim-go"] = {
+  --   module = "go",
+  --   event = "BufRead *.go",
+  --   config = function() require("user.plugins.nvim-go").setup() end,
+  -- },
+  -- ["leoluz/nvim-dap-go"] = {
+  --   event = "BufRead *.go",
+  --   config = function()
+  --     require("dap-go").setup {
+  --       dap_configurations = {
+  --         {
+  --           type = "go",
+  --           name = "Attach remote",
+  --           mode = "remote",
+  --           request = "attach",
+  --         },
+  --         {
+  --           name = "Launch Package",
+  --           type = "go",
+  --           request = "launch",
+  --           mode = "auto",
+  --           program = "${fileDirname}",
+  --           args = {
+  --             "start",
+  --           },
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
+  ["ray-x/go.nvim"] = {
+    ft = "go",
+    config = function() require("go").setup(require "user.plugins.go-nvim") end,
   },
 }

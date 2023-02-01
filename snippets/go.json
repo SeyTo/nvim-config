@@ -5,6 +5,12 @@
       "// TODO: "
     ]
   },
+  "fixme": {
+    "prefix": "fixme",
+    "body": [
+      "// FIXME"
+    ]
+  },
   "init var": {
     "prefix": "vv",
     "body": [
