@@ -286,5 +286,14 @@
       "${1:log} \"github.com/sirupsen/logrus\"",
       "$0"
     ]
+  },
+  "If error": {
+    "description": "if err condition",
+    "prefix": "iferr",
+    "body": [
+      "if err != nil {",
+      "  return nil, err$0",
+      "}"
+    ]
   }
 }

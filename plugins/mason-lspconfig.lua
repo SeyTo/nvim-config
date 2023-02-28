@@ -9,7 +9,6 @@ return {
     "jsonls",
     "pyright",
     "sqls",
-    "sumneko_lua",
     "tsserver",
     "yamlls",
   },
