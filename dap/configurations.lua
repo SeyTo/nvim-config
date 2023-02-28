@@ -62,23 +62,22 @@ return {
     },
     attach_node,
   },
-  -- go = {
-  --   {
-  --     type = "go",
-  --     name = "Debug",
-  --     request = "launch",
-  --     program = "${file}",
-  --     args = {
-  --       "start",
-  --       "--config cmd/defaults.yaml",
-  --     },
-  --   },
-  -- {
-  --   type = "go",
-  --   name = "Attach",
-  --   mode = "local",
-  --   request = "attach",
-  --   processId = require("dap.utils").pick_process,
-  -- },
-  -- },
+  go = {
+    {
+      type = "go",
+      name = "Debug",
+      request = "launch",
+      program = "main.go",
+      args = {
+        "start",
+      },
+    },
+    -- {
+    --   type = "go",
+    --   name = "Attach",
+    --   mode = "local",
+    --   request = "attach",
+    --   processId = require("dap.utils").pick_process,
+    -- },
+  },
 }
