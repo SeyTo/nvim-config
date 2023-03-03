@@ -8,7 +8,7 @@
   "fixme": {
     "prefix": "fixme",
     "body": [
-      "// FIXME"
+      "// FIXME: $0"
     ]
   },
   "init var": {
@@ -123,7 +123,7 @@
     "prefix": "ier",
     "body": [
       "if err != nil {",
-      "  $0",
+      "  return nil, err$0",
       "}"
     ]
   },
@@ -285,15 +285,6 @@
     "body": [
       "${1:log} \"github.com/sirupsen/logrus\"",
       "$0"
-    ]
-  },
-  "If error": {
-    "description": "if err condition",
-    "prefix": "iferr",
-    "body": [
-      "if err != nil {",
-      "  return nil, err$0",
-      "}"
     ]
   }
 }

@@ -75,13 +75,12 @@ return {
   gopls_remote_auto = true, -- add -remote=auto to gopls
   gocoverage_sign = "█",
   sign_priority = 5, -- change to a higher number to override other signs
-  dap_debug = true, -- set to false to disable dap
+  dap_debug = false, -- set to false to disable dap
   dap_debug_keymap = false, -- true: use keymap for debugger defined in go/dap.lua
   -- false: do not use keymap in go/dap.lua.  you must define your own.
   -- windows: use visual studio keymap
   dap_debug_gui = {}, -- bool|table put your dap-ui setup here set to false to disable
   dap_debug_vt = { enabled_commands = true, all_frames = true }, -- bool|table put your dap-virtual-text setup here set to false to disable
-
   dap_port = -1, -- can be set to a number, if set to -1 go.nvim will pickup a random port
   dap_timeout = 15, --  see dap option initialize_timeout_sec = 15,
   dap_retries = 20, -- see dap option max_retries
