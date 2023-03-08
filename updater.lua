@@ -1,4 +1,4 @@
 return {
-  channel = "nightly",
-  skip_prompts = true,
+  channel = "main",
+  skip_prompts = false,
 }

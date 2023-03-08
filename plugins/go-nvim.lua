@@ -3,14 +3,13 @@
 -- if lsp_ok then capabilities = cmp_nvim_lsp.update_capabilities(capabilities) end
 -- local path = require "nvim-lsp-installer.core.path"
 -- local install_root_dir = path.concat { vim.fn.stdpath "data", "lsp_servers" }
-
 return {
   disable_defaults = false, -- true|false when true set false to all boolean settings and replace all table
   -- settings with {}
   go = "go", -- go command, can be go[default] or go1.18beta1
   goimport = "gopls", -- goimport command, can be gopls[default] or goimport
   fillstruct = "gopls", -- can be nil (use fillstruct, slower) and gopls
-  gofmt = "gofumpt", --gofmt cmd,
+  gofmt = "goimport", --gofmt cmd,
   max_line_len = 128, -- max line length in golines format, Target maximum line length for golines
   tag_transform = false, -- can be transform option("snakecase", "camelcase", etc) check gomodifytags for details and more options
   tag_options = "json=omitempty", -- sets options sent to gomodifytags, i.e., json=omitempty

@@ -120,7 +120,7 @@
     ]
   },
   "if error": {
-    "prefix": "ier",
+    "prefix": "ifer",
     "body": [
       "if err != nil {",
       "  return nil, err$0",
@@ -285,6 +285,15 @@
     "body": [
       "${1:log} \"github.com/sirupsen/logrus\"",
       "$0"
+    ]
+  },
+  "Comment": {
+    "description": "Comment long form",
+    "prefix": "/**",
+    "body": [
+      "/**",
+      " *",
+      "*/"
     ]
   }
 }

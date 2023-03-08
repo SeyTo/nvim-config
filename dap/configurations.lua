@@ -80,4 +80,13 @@ return {
     --   processId = require("dap.utils").pick_process,
     -- },
   },
+  python = {
+    {
+      type = "python",
+      request = "launch",
+      name = "Launch file",
+      program = "${file}",
+      pythonPath = function() return "/usr/bin/python" end,
+    },
+  },
 }
