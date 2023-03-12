@@ -295,5 +295,12 @@
       " *",
       "*/"
     ]
+  },
+  "Struct var": {
+    "description": "Create new struct variable",
+    "prefix": "varstr",
+    "body": [
+      "${1:varName} := &{2:struct}"
+    ]
   }
 }
